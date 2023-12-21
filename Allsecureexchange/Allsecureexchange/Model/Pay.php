@@ -570,7 +570,7 @@ class Pay extends \Magento\Payment\Model\Method\AbstractMethod
                 ->setBillingAddress1($street1)
                 ->setBillingCity($billingAddress->getCity())
                 ->setBillingPostcode($billingAddress->getPostcode())
-                ->setBillingState($billingAddress->getRegion())
+                ->setBillingState($billingAddress->getRegion() ? $billingAddress->getRegion() : $billingAddress->getCity())
                 ->setBillingCountry($billingAddress->getCountryId())
                 ->setBillingPhone($billingAddress->getTelephone())
                 ->setShippingFirstName($shippingAddress->getFirstname())
