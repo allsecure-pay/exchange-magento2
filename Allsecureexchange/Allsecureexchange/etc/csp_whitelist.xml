@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="default-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="object-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+        <policy id="media-src">
+            <values>
+                <value id="allsecure-paymentjs-sandbox" type="host">https://asxgw.paymentsandbox.cloud</value>
+                <value id="allsecure-paymentjs-live" type="host">https://asxgw.com</value>
+				<value id="allsecure-paymentjs-secure" type="host">https://secure.asxgw.com</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>
