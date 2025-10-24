@@ -1,5 +1,9 @@
 # Release Notes
 
+## v2.0.3 (2025-10-24)
+### Added
+- Magento Content security policies added for latest versions(from 2.4.7). Prior to version 2.4.7, third party content security policies not strict.
+
 ## v2.0.2 (2023-11-03)
 ### Added
 - Installment option provided.
