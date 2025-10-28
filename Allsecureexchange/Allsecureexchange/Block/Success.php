@@ -64,7 +64,7 @@ class Success extends \Magento\Checkout\Block\Success
      */
     public function getRealOrder()
     {
-        $order_id = $this->request->getParam('order_id');
+        $order_id = $this->request->getParam('mage_order_incr_id');
         return $this->orderFactory->create()->loadByIncrementId($order_id);
     }
     
