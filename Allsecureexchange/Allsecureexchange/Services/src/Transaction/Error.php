@@ -135,7 +135,7 @@ class Error {
      * @param string|null $adapterMessage
      * @param string|null $adapterCode
      */
-    public function __construct($message="", $code=null, $adapterMessage=null, $adapterCode=null) {
+    public function __construct($message="", ?int $code=null, ?string $adapterMessage=null, ?string $adapterCode=null) {
         $this->errorMessage = $message;
         $this->errorCode = $code ?: self::UNKNOWN;
         $this->adapterMessage = $adapterMessage;

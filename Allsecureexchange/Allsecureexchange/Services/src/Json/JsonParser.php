@@ -515,7 +515,7 @@ class JsonParser {
      *
      * @return null
      */
-    protected function arrGet($arr, $key, $default=null){
+    protected function arrGet($arr, $key, ?string $default=null){
         if(isset($arr[$key])){
             return $arr[$key];
         }

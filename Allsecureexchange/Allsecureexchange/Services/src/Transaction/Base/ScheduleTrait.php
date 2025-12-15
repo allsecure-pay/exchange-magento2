@@ -33,7 +33,7 @@ trait ScheduleTrait {
      *
      * @return $this
      */
-    public function setSchedule($schedule = null) {
+    public function setSchedule(ScheduleData|ScheduleWithTransaction|null $schedule = null) {
         $this->schedule = $schedule;
 
         return $this;
