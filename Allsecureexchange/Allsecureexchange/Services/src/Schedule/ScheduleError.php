@@ -80,7 +80,7 @@ class ScheduleError {
      * @param string $message
      * @param int|null $code
      */
-    public function __construct($message, $code = null) {
+    public function __construct($message, ?int $code = null) {
         $this->message = $message;
         $this->code = $code ?: self::UNKNOWN;
     }

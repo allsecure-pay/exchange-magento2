@@ -1,5 +1,21 @@
 # Release Notes
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+## v2.0.3 (2025-12-01)
+### Added
+- Magento Content security policies added for latest versions(from 2.4.7). Prior to version 2.4.7, third party content security policies not strict.
+- Updated the checkout success block overriden which was conflicted with paypal braintree module.
+- Email template params issue
+- And supports latest PHP version 8.4
+
+>>>>>>> Stashed changes
 ## v2.0.2 (2023-11-03)
 ### Added
 - Installment option provided.

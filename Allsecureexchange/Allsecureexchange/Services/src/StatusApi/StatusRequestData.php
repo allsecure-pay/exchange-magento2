@@ -39,7 +39,7 @@ class StatusRequestData {
      *
      * @param null $uuid
      */
-    public function __construct($uuid = null) {
+    public function __construct(?string $uuid = null) {
         $this->uuid = $uuid;
     }
 

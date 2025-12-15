@@ -53,7 +53,7 @@ class ContinueSchedule {
      * @param string $format
      * @return string
      */
-    public function getContinueDateTimeFormatted($format = null)
+    public function getContinueDateTimeFormatted(?string $format = null)
     {
         return $this->continueDateTime ? $this->continueDateTime->format($format ? $format : 'Y-m-d H:i:s T') : null;
     }

@@ -35,7 +35,7 @@ trait AddToCustomerProfileTrait {
      *
      * @return $this
      */
-    public function setCustomerProfileData(CustomerProfileData $customerProfileData = null) {
+    public function setCustomerProfileData(?CustomerProfileData $customerProfileData = null) {
         $this->customerProfileData = $customerProfileData;
         return $this;
     }

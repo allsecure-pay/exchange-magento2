@@ -57,7 +57,7 @@ class XmlGenerator {
      * @param string $language
      * @return \DOMDocument
      */
-    public function generateTransaction($method, AbstractTransaction $transaction, $username, $password, $language=null) {
+    public function generateTransaction($method, AbstractTransaction $transaction, $username, $password, ?string $language=null) {
         $this->document = new \DOMDocument('1.0', 'utf-8');
         $this->document->formatOutput = true;
         $root = $this->document->createElementNS($this->namespaceRoot . '/Schema/V2/Transaction', 'transaction');
@@ -122,7 +122,7 @@ class XmlGenerator {
      *
      * @return string
      */
-    public function generateTransactionXml($method, AbstractTransaction $transaction, $username, $password, $language=null) {
+    public function generateTransactionXml($method, AbstractTransaction $transaction, $username, $password, ?string $language=null) {
         return $this->generateTransaction($method, $transaction, $username, $password, $language)->saveXML();
     }
 

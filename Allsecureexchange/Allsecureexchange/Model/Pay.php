@@ -180,9 +180,9 @@ class Pay extends \Magento\Payment\Model\Method\AbstractMethod
 		\Magento\Sales\Model\Service\InvoiceService $invoiceService,
         \Magento\Framework\DB\Transaction $transaction,
         \Magento\Framework\Locale\Resolver $locale,
-        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
-        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
-        \Magento\Directory\Helper\Data $directory = null,
+        ?\Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
+        ?\Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
+        ?\Magento\Directory\Helper\Data $directory = null,
 		array $data = []
     ) {
         $this->allsecurepayHelper = $allsecurepayHelper;
@@ -256,7 +256,7 @@ class Pay extends \Magento\Payment\Model\Method\AbstractMethod
      *
      * @return bool
      */
-    public function isAvailable(\Magento\Quote\Api\Data\CartInterface $quote = null)
+    public function isAvailable(?\Magento\Quote\Api\Data\CartInterface $quote = null)
     {
         $isAvailable = parent::isAvailable($quote);
        if ($isAvailable) {

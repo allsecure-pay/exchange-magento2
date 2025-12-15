@@ -181,7 +181,7 @@ class Client
      * @param string $language
      * @param bool   $testMode - DEPRECATED
      */
-    public function __construct($username, $password, $apiKey, $sharedSecret, $language = null, $testMode = false) {
+    public function __construct($username, $password, $apiKey, $sharedSecret, ?string $language = null, $testMode = false) {
         $this->username = $username;
         $this->setPassword($password);
         $this->apiKey = $apiKey;
@@ -784,7 +784,7 @@ class Client
      * @throws RateLimitException
      * @throws GeneralErrorException
      */
-    public function getOptions($identifier, $parameters = [], $_ = null) {
+    public function getOptions($identifier, $parameters = [], ?string $_ = null) {
         $endpoint = self::OPTIONS_REQUEST;
         $endpoint = str_replace('{optionsName}', $identifier, $endpoint);
 
@@ -977,7 +977,7 @@ class Client
      * @throws RateLimitException
      * @throws GeneralErrorException
      */
-    public function updateCustomerProfileByProfileGuid($profileGuid, CustomerData $customerData, $preferredInstrument = null) {
+    public function updateCustomerProfileByProfileGuid($profileGuid, CustomerData $customerData, string|PaymentInstrument|null $preferredInstrument = null) {
         $requestData = array(
             'profileGuid' => $profileGuid,
             'customerData' => $customerData->toArray()
@@ -1021,7 +1021,7 @@ class Client
      * @throws RateLimitException
      * @throws GeneralErrorException
      */
-    public function updateCustomerProfileByIdentification($customerIdentification, CustomerData $customerData, $preferredInstrument = null) {
+    public function updateCustomerProfileByIdentification($customerIdentification, CustomerData $customerData, string|PaymentInstrument|null $preferredInstrument = null) {
         $requestData = array(
             'customerIdentification' => $customerIdentification,
             'customerData' => $customerData->toArray()
