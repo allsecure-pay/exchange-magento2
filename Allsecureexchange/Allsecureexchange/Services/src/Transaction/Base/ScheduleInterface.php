@@ -17,5 +17,5 @@ interface ScheduleInterface {
      *
      * @return $this
      */
-    public function setSchedule($schedule = null);
+    public function setSchedule(ScheduleData|ScheduleWithTransaction|null $schedule = null);
 }

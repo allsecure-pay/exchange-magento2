@@ -10,7 +10,7 @@ require_once __DIR__.'/../Services/initClientAutoload.php';
 use Exchange\Client\Client as AllsecureClient;
 use Exchange\Client\StatusApi\StatusRequestData;
 
-class Success extends \Magento\Checkout\Block\Success
+class Success extends \Magento\Framework\View\Element\Template
 {
     /**
      * @var \Allsecureexchange\Allsecureexchange\Helper\Data $helper
@@ -50,7 +50,7 @@ class Success extends \Magento\Checkout\Block\Success
         \Magento\Framework\View\Element\Template\Context $context,
         array $data = []
     ) {
-        parent::__construct($context, $orderFactory, $data);
+        parent::__construct($context, $data);
         $this->helper = $helper;
         $this->payment = $payment;
         $this->orderFactory = $orderFactory;

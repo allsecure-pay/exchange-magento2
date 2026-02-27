@@ -65,8 +65,8 @@ class PaymentInfo extends \Magento\Framework\View\Element\Template
      */
     public function getRealOrder()
     {
-        $order_id = $order_id = (int)$this->getData("order_id");
-        return $this->orderFactory->create()->loadByIncrementId($order_id);
+        $order_id = (int)$this->getData("order_id");
+        return $this->orderFactory->create()->load($order_id);
     }
     
     /**

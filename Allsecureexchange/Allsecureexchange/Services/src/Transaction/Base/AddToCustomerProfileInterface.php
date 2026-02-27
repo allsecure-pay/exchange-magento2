@@ -19,7 +19,7 @@ interface AddToCustomerProfileInterface {
     /**
      * @param CustomerProfileData $customerProfileData
      */
-    public function setCustomerProfileData(CustomerProfileData $customerProfileData = null);
+    public function setCustomerProfileData(?CustomerProfileData $customerProfileData = null);
     
     /**
      * @param bool $addToCustomerProfile

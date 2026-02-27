@@ -44,7 +44,7 @@ class JsonGenerator {
      *
      * @return array
      */
-    public function generateTransaction($method, AbstractTransaction $transaction, $language=null) {
+    public function generateTransaction($method, AbstractTransaction $transaction, ?string $language=null) {
 
         // common
         $json = [
