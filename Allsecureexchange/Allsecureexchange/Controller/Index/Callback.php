@@ -66,7 +66,7 @@ class Callback extends \Magento\Framework\App\Action\Action
             if (isset($params['order_id']) && !empty($params['order_id'])) {
                 $orderId = trim($params['order_id']);
                 $order = $this->orderFactory->create()->loadByIncrementId($orderId);
-                return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['order_id' => $orderId]));
+                return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['mage_order_incr_id' => $orderId]));
             } else {
                 throw new \Magento\Framework\Exception\LocalizedException(__('Empty response received from gateway.'));
             }

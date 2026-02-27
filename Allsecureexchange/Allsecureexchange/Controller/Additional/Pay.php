@@ -143,7 +143,7 @@ class Pay extends \Magento\Framework\App\Action\Action
                         $order->addStatusHistoryComment($comment, $status);
                         $order->save();
                         $this->orderSender->send($order, true);
-                        return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['order_id' => $order->getIncrementId()]));
+                        return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['mage_order_incr_id' => $order->getIncrementId()]));
                     } elseif ($result->getReturnType() == AllsecureResult::RETURN_TYPE_FINISHED) {
                         //payment is finished, update your cart/payment transaction
                         if ($action == 'debit') {
@@ -170,7 +170,7 @@ class Pay extends \Magento\Framework\App\Action\Action
                             $this->orderSender->send($order, true);
                             $model->createInvoice($order, $gatewayReferenceId, 'not_capture');
                         }
-                        return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['order_id' => $order->getIncrementId()]));
+                        return $this->getResponse()->setRedirect($model->getCheckoutSuccessUrl(['mage_order_incr_id' => $order->getIncrementId()]));
                     }
                 } else {
                     // handle error
