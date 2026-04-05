@@ -604,7 +604,7 @@ class Pay extends \Magento\Payment\Model\Method\AbstractMethod
             } else if ($gender == 2) {
                 $gender = AllsecureCustomer::GENDER_FEMALE;
             }
-            $customer->setGender();
+            $customer->setGender($gender);
         }
         
         $amount = $order->getGrandTotal();
